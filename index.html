@@ -1446,11 +1446,12 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 @media (max-width: 768px) {
     .flowers {
         position: absolute;
-        bottom: 5vh; /* Slightly raise the bottom position */
-        left: 0; /* Ensures alignment starts from the left */
-        width: 100%; /* Stretches the flowers across the width */
-        transform: scale(1); /* Adjust scale to ensure full visibility */
-        transition: transform 0.3s ease-in-out; /* Smooth transition for transformations */
+        bottom: 0; /* Aligns the flowers right at the bottom */
+        left: 0; /* Starts from the left edge of the screen */
+        width: 100%; /* Ensures flowers cover the full width of the screen */
+        height: auto; /* Maintains the original height aspect ratio */
+        transform: scale(1); /* Adjust if necessary to fit or fill */
+        overflow: visible; /* Ensures parts of the flowers are not cut off */
     }
 
     .person-name {
@@ -1458,15 +1459,16 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     }
 
     body {
-        height: 100vh; /* Full viewport height */
-        margin: 0; /* Removes default margin */
-        display: flex; /* Utilize flexbox for better alignment */
-        flex-direction: column; /* Stacks children vertically */
-        justify-content: flex-end; /* Aligns children to the bottom */
-        align-items: center; /* Centers children horizontally */
-        overflow: hidden; /* Hides any overflow to prevent scrolling */
+        height: 100vh; /* Ensures the body takes the full height of the viewport */
+        margin: 0; /* Eliminates any default margin */
+        padding: 0; /* Eliminates any default padding */
+        display: flex; /* Uses flexbox for layout */
+        flex-direction: column; /* Aligns children elements in a column */
+        justify-content: flex-end; /* Aligns children at the bottom */
+        align-items: center; /* Centers items horizontally */
     }
 }
+
 
 
 
