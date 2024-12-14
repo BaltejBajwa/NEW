@@ -1445,18 +1445,24 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
       
 @media (max-width: 768px) {
     .flowers {
-        transform: scale(0.7); /* Maintain scale but remove translation */
-        transition: transform 0.3s ease-in-out; /* Smooth transition */
+        position: absolute; /* Ensures positioning relative to the nearest positioned ancestor (instead of initial static) */
+        bottom: 0; /* Aligns the flowers at the bottom of the screen */
+        transform: scale(0.7); /* Adjust the size without moving the position */
+        transition: transform 0.3s ease-in-out; /* Smooth transition for transformation */
+        width: 100%; /* Ensures the flowers stretch across the full width if needed */
+        left: 0; /* Aligns the flowers to the left edge */
     }
 
     .person-name {
-        top: 25%; /* Keep the name position as it was or adjust as needed */
+        top: 25%; /* Adjust if necessary to position the name properly */
     }
 
     body {
-        align-items: center; /* Center align the content vertically */
+        align-items: flex-end; /* Adjusts body’s children to align at the bottom */
+        height: 100vh; /* Ensures the body takes at least the full height of the viewport */
     }
 }
+
 
 
 
