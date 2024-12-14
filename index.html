@@ -1442,6 +1442,21 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: paused !important;
 }
+@media (max-width: 768px) {
+    .flowers {
+        transform: translate(0, -20%) scale(0.6); /* Adjust translation and scale for mobile */
+        transition: transform 0.3s ease-in-out; /* Smooth transition for moving the flowers */
+    }
+
+    .person-name {
+        top: 20%; /* Move the name higher on mobile screens */
+    }
+
+    body {
+        align-items: center; /* Adjust alignment to better fit mobile screens */
+    }
+}
+
   </style>
 </body>
 <script>
