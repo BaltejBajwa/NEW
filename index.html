@@ -1446,29 +1446,29 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 @media (max-width: 768px) {
     .flowers {
         position: absolute;
-        bottom: 5vh; /* Adjusts vertical position to ensure visibility */
-        left: 50%; /* Centers horizontally */
-        transform: translateX(-50%) scale(1); /* Correctly centers and scales the flowers */
-        width: 110vw; /* Slightly larger width to ensure full visibility */
-        height: 30vh; /* Adjusted height to prevent cutting off */
-        overflow: visible; /* Allows parts of the flowers to be visible outside the boundary if needed */
+        bottom: 0; /* Ensures the flowers are at the very bottom of the screen */
+        left: 0; /* Starts positioning from the left edge */
+        width: 100%; /* Ensures the flowers cover the full width of the viewport */
+        height: 30vh; /* Provides a specific height for the flowers */
+        overflow: visible; /* Ensures no part of the flowers is hidden */
     }
 
     .person-name {
-        top: 15%; /* Adjust if necessary */
+        position: absolute;
+        top: 15%; /* Keeps the name in a fixed position */
+        width: 100%; /* Ensures the name is centered */
+        text-align: center; /* Centers the text horizontally */
     }
 
     body {
+        position: relative; /* Ensures that absolute positioning is relative to the body */
         height: 100vh; /* Full viewport height */
-        margin: 0; /* Removes default margin */
-        padding: 0; /* Removes default padding */
-        display: flex; /* Uses flexbox for layout */
-        flex-direction: column; /* Organizes children vertically */
-        justify-content: flex-end; /* Aligns children at the bottom */
-        align-items: center; /* Centers items horizontally */
-        overflow: hidden; /* Prevents scroll bars */
+        margin: 0; /* No margin to interfere with element positioning */
+        padding: 0; /* No padding to interfere with element positioning */
+        overflow: hidden; /* Hides any overflow to ensure no scroll bars appear */
     }
 }
+
 
 
 
